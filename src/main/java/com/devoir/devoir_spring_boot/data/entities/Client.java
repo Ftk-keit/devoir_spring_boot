@@ -17,13 +17,8 @@ public class Client {
     private Long id;
 
     @Column(nullable = false, length = 50)
-    @NotNull
     private String name;
 
-    @Column(length = 25)
-    @NotNull(message = "Le numéro de téléphone ne doit pas être null")
-    @NotBlank(message = "Le numéro de téléphone ne doit pas être vide")
-    @Pattern(regexp = "^\\+?[0-9. ()-]{7,25}$", message = "Numéro de téléphone invalide")
     @Column(unique = true, nullable = false)
     private String telephone;
 

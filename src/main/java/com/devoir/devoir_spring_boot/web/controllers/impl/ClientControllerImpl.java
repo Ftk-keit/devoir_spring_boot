@@ -20,7 +20,7 @@ public class ClientControllerImpl implements ClientController {
 
     @Override
     public ResponseEntity<Response> createClientWithCommandes(@Valid @RequestBody ClientRequest client) {
-        Client client1 = clientService.save(client.ToEntity(client)));
+        Client client1 = clientService.save(client.ToEntity());
         //regle pour valider.......
         return new ResponseEntity<>(new Response("201", "Clients", client1), HttpStatus.CREATED) ;
     }

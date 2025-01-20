@@ -22,10 +22,10 @@ public class ClientRequest {
     @Column(unique = true, nullable = false)
     private String telephone;
 
-    public Client ToEntity(Client data) {
+    public Client ToEntity() {
         Client entity = new Client();
-        entity.setName(data.getName());
-        entity.setTelephone(data.getTelephone());
+        entity.setName(this.name);
+        entity.setTelephone(this.telephone);
 
     return entity;
     }
